@@ -17,11 +17,11 @@ import java.util.NoSuchElementException;
 import static java.util.Objects.isNull;
 
 @Slf4j
-public abstract class BaseServiceImpl<T, C, U> implements BaseService<T, C, U> {
+public abstract class DomainServiceImpl<T, C, U> implements DomainService<T, C, U> {
 
     protected final BaseDao<T> repository;
 
-    public BaseServiceImpl(BaseDao<T> repository) {
+    public DomainServiceImpl(BaseDao<T> repository) {
         this.repository = repository;
     }
 

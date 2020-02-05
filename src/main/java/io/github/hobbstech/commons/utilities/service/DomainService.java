@@ -5,7 +5,7 @@ import org.springframework.data.domain.Pageable;
 
 import java.util.Collection;
 
-public interface BaseService<T, C, U> {
+public interface DomainService<T, C, U> {
 
     T findById(Long id);
 
