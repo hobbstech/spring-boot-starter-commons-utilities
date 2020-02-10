@@ -11,7 +11,7 @@ import java.util.Optional;
 
 import static java.util.Objects.isNull;
 
-@Component
+@Component("utilitiesSystemLoggedInUserAuditorAware")
 public class SystemLoggedInUserAuditorAware implements AuditorAware<String> {
 
     @Override
