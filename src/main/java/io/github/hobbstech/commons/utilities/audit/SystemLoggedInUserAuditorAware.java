@@ -23,6 +23,12 @@ public class SystemLoggedInUserAuditorAware implements AuditorAware<String> {
             return Optional.empty();
         }
 
+        val principal = authentication.getPrincipal();
+
+        if (principal instanceof String) {
+            return Optional.of((String) principal);
+        }
+
         return Optional.of(((UserDetails) authentication.getPrincipal()).getUsername());
     }
 }
