@@ -28,7 +28,7 @@ public class CustomSpecificationTemplateImplBuilder<T> {
         searchCriterias.forEach(searchCriteria -> specifications.add(new CustomSpecificationTemplateImpl<>(searchCriteria)));
         Specification<T> result = specifications.get(0);
         for (int i = 1; i < specifications.size(); i++)
-            result = Specification.where(result).and(specifications.get(i));
+            result = Specification.where(result).or(specifications.get(i));
         return result;
     }
 

@@ -18,12 +18,12 @@ import java.util.NoSuchElementException;
         havingValue = "true", matchIfMissing = true)
 public class CustomResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
 
-    @ExceptionHandler(org.springframework.security.access.AccessDeniedException.class)
-    public final ResponseEntity<ErrorMessage> handleAccessDeniedException(org.springframework.security.access.AccessDeniedException ex, WebRequest request) {
-        ErrorMessage errorDetails = new ErrorMessage(new Date(), ex.getMessage(), request.getDescription(false), ex.getClass().getName());
-        ex.printStackTrace();
-        return new ResponseEntity<>(errorDetails, HttpStatus.FORBIDDEN);
-    }
+//    @ExceptionHandler(org.springframework.security.access.AccessDeniedException.class)
+//    public final ResponseEntity<ErrorMessage> handleAccessDeniedException(org.springframework.security.access.AccessDeniedException ex, WebRequest request) {
+//        ErrorMessage errorDetails = new ErrorMessage(new Date(), ex.getMessage(), request.getDescription(false), ex.getClass().getName());
+//        ex.printStackTrace();
+//        return new ResponseEntity<>(errorDetails, HttpStatus.FORBIDDEN);
+//    }
 
     @ExceptionHandler(AccessDeniedException.class)
     public final ResponseEntity<ErrorMessage> handleAccessDeniedException(AccessDeniedException ex, WebRequest request) {

@@ -67,7 +67,7 @@ public class CustomSpecificationTemplateImpl<T> implements Specification<T> {
 
     private Expression getRoot(String key, Root<T> root, CriteriaBuilder builder, String... keys) {
 
-        Arrays.asList(keys).forEach(key1 -> log.info("---> {}", key1));
+        Arrays.asList(keys).forEach(key1 -> log.trace("---> {}", key1));
 
         if (keys.length > 1) {
 
