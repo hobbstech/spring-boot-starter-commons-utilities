@@ -15,7 +15,7 @@ import java.util.NoSuchElementException;
 @ControllerAdvice
 @RestController
 @ConditionalOnProperty(value = "hobbstech.commons.default-exception-resolver.enabled",
-        havingValue = "true", matchIfMissing = true)
+        havingValue = "true", matchIfMissing = false)
 public class CustomResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
 
 //    @ExceptionHandler(org.springframework.security.access.AccessDeniedException.class)
